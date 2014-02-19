@@ -4,12 +4,12 @@ var	snapQuicksearch = {
 				event.preventDefault();
 				$('.snap-drawer-right .loading').show();
 				kriminalvarden.helpers.log('Click quicksearch button');
-				kriminalvarden.quicksearch.doQuickSearch($('.snap-drawer-right .searchfield-snap').val());
+				snapQuicksearch.doQuickSearch($('.snap-drawer-right .searchfield-snap').val());
 			});
 			$('.snap-drawer-right .searchfield-snap').keydown(function( event ) {
 				if (event.which === 13) {
 					$('.snap-drawer-right .loading').show();
-					kriminalvarden.quicksearch.doQuickSearch($(this).val());
+					snapQuicksearch.doQuickSearch($(this).val());
 					$(this).blur();
 				}
 			});
