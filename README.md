@@ -1,3 +1,5 @@
-Custom SnapJS Implementation Package
+Snap Navigation
 =====================
+
+Custom Snap.js Implementation Package
 
