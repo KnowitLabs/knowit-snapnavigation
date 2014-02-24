@@ -1,4 +1,3 @@
-knowit-snapnavigation
+Custom SnapJS Implementation Package
 =====================
 
-Custom application of snap-js with JSON search tab
