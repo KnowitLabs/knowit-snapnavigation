@@ -8,7 +8,6 @@
 	"description": "Starter Kit for snap.js",
 	"main": "snapUtils.js",
 	"license": "MIT",
-	"private": true,
 	"ignore": [
 		"**/.*",
 		"node_modules",
@@ -18,7 +17,10 @@
 	],
 	"dependencies": {
 		"jquery": ">=1.7",
-		"kitUtils": ">=0.9",
+		"kitUtils": ">=0.9.0",
 		"snapjs": null
-	}
+	},
+	"keywords": [
+		"SnapNavigation"
+	]
 }
