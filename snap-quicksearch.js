@@ -3,7 +3,7 @@ var snapQuicksearch = {
 		$('.quicksearch-button').on('click', function (event) {
 			event.preventDefault();
 			$('.snap-drawer-right .loading').show();
-			kriminalvarden.helpers.log('Click quicksearch button');
+			kitUtils.log('Click quicksearch button');
 			snapQuicksearch.doQuickSearch($('.snap-drawer-right .searchfield-snap').val());
 		});
 		$('.snap-drawer-right .searchfield-snap').keydown(function (event) {
@@ -16,11 +16,11 @@ var snapQuicksearch = {
 	},
 	doQuickSearch: function (query) {
 		$href = $('.quicksearchbar').data('searchurl') + '&q=' + query;
-		kriminalvarden.helpers.log($href);
+		kitUtils.log($href);
 
 		$('#quicksearch-button').attr('href', $href);
 
-		kriminalvarden.helpers.log('start quicksearch');
+		kitUtils.log('start quicksearch');
 		$jsonurl = $('.quicksearchbar').data('json');
 		$ajaxCall = $.ajax({
 			url: $jsonurl + '&query=' + query,
@@ -29,15 +29,15 @@ var snapQuicksearch = {
 
 		// Ajax success
 		$ajaxCall.done(function (response) {
-			kriminalvarden.helpers.log('quicksearch response');
+			kitUtils.log('quicksearch response');
 			// Found products
-			kriminalvarden.helpers.log(response);
+			kitUtils.log(response);
 
 			$foundResults = response.Items.length;
 
 			// Check if any products found
 			if ($foundResults > 0) {
-				kriminalvarden.helpers.log('quicksearch results > 0');
+				kitUtils.log('quicksearch results > 0');
 				directive = {
 					"li": {
 						"pageItems <- Items": {
