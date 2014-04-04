@@ -1,5 +1,5 @@
-var	snapNavigation = {
-		init : function() {
+var snapNavigation = {
+	init: function () {
 
 		// SnapJS
 		var snapper = new Snap({
@@ -10,34 +10,36 @@ var	snapNavigation = {
 			touchToDrag: false
 		});
 
-		$(window).bind( 'orientationchange', function(e){
+		$(window).bind('orientationchange', function (e) {
 			snapper.close();
-			$('html,body').animate({scrollTop:0},0);
+			$('html,body').animate({
+				scrollTop: 0
+			}, 0);
 		});
 
 		// Toggle Sidebar
-		$('#toggle-sidebar').on('click', function(e) {
+		$('#toggle-sidebar').on('click', function (e) {
 			e.preventDefault();
 
-			if($('body').hasClass('snapjs-left')) {
+			if ($('body').hasClass('snapjs-left')) {
 				snapper.close('left');
 			} else {
 				snapper.open('left');
 			}
 		});
 
-		snapper.on('close', function(){
+		snapper.on('close', function () {
 			$('.searchfield-snap').blur();
 			$('#top-bar').show();
 		});
 
-		snapper.on('open', function(){
+		snapper.on('open', function () {
 			$('#top-bar').hide();
 		});
 
 		// Toggles the plus/minus icons when opening and closing ul/li in the menu
-		$('.mobile-navigation-list li.haschildren a').click(function(e) {
-			kriminalvarden.helpers.log(e.target);
+		$('.mobile-navigation-list li.haschildren a').click(function (e) {
+			kitUtils.log(e.target);
 			if ($(e.target).is('i')) {
 				$(this).parent().toggleClass('expanded');
 				if ($(this).parent().hasClass('expanded')) {
@@ -51,7 +53,7 @@ var	snapNavigation = {
 			}
 		});
 
-		$('.mobile-navigation-list li.haschildren a').on('touchstart',function(e) {
+		$('.mobile-navigation-list li.haschildren a').on('touchstart', function (e) {
 			if (!$(e.target).is('i')) {
 				$(this).addClass('focus');
 			} else {
@@ -59,70 +61,80 @@ var	snapNavigation = {
 			}
 		});
 
-		$('.mobile-navigation-list li.haschildren a').on('touchmove',function(e) {
+		$('.mobile-navigation-list li.haschildren a').on('touchmove', function (e) {
 			$('.mobile-navigation-list a').removeClass('focus');
 			$('.mobile-navigation-list i').removeClass('focus');
 		});
 
-		$('.mobile-navigation-list li.haschildren a').on('touchend',function(e) {
+		$('.mobile-navigation-list li.haschildren a').on('touchend', function (e) {
 			$('.mobile-navigation-list a').removeClass('focus');
 			$('.mobile-navigation-list i').removeClass('focus');
 		});
 
-		$('.mobile-navigation-list li.haschildren a').on('touchleave',function(e) {
+		$('.mobile-navigation-list li.haschildren a').on('touchleave', function (e) {
 			$('.mobile-navigation-list a').removeClass('focus');
 			$('.mobile-navigation-list i').removeClass('focus');
 		});
 
-		$('.mobile-navigation-list li.haschildren a').on('touchcancel',function(e) {
+		$('.mobile-navigation-list li.haschildren a').on('touchcancel', function (e) {
 			$('.mobile-navigation-list a').removeClass('focus');
 			$('.mobile-navigation-list i').removeClass('focus');
 		});
 
-		$('.snap-overlay').on('touchmove', function(e) {
+		$('.snap-overlay').on('click', function (e) {
 			snapper.close();
 			e.preventDefault();
 		});
 
-		$('.snap-overlay').on('touchend', function(e) {
+		$('.snap-overlay').on('touchmove', function (e) {
 			snapper.close();
 			e.preventDefault();
 		});
 
-		$('.snap-overlay').on('touchleave', function(e) {
+		$('.snap-overlay').on('touchend', function (e) {
 			snapper.close();
 			e.preventDefault();
 		});
 
-		$('.snap-overlay').on('touchcancel', function(e) {
+		$('.snap-overlay').on('touchleave', function (e) {
+			snapper.close();
+			e.preventDefault();
+		});
+
+		$('.snap-overlay').on('touchcancel', function (e) {
 			snapper.close();
 			e.preventDefault();
 		});
 
 		// Toggle Sidebar
-		$('#toggle-searchbar').on('click', function(e) {
+		$('#toggle-searchbar').on('click', function (e) {
 
 			// Prevent default
 			e.preventDefault();
 
-			if($('body').hasClass('snapjs-right')) {
+			if ($('body').hasClass('snapjs-right')) {
 				// Close sidebar
 				snapper.close('right');
 			} else {
 				// Open sidebar
 				snapper.open('right');
-				$('html,body').animate({scrollTop:0},0);
+				$('html,body').animate({
+					scrollTop: 0
+				}, 0);
 			}
 		});
 
 		// Close Link
-		$('.snap-drawer .close-menu').on('click', function(e) {
+		$('.snap-drawer .close-menu').on('click', function (e) {
 			e.preventDefault();
 			snapper.close();
 		});
-}};
+	}
+};
 
 var snapQuicksearch = {
+	searchResultTemplate: null,
+
 	init: function () {
 		$('.quicksearch-button').on('click', function (event) {
 			event.preventDefault();
@@ -137,6 +149,17 @@ var snapQuicksearch = {
 				$(this).blur();
 			}
 		});
+
+		directive = {
+			"li": {
+				"pageItems <- Items": {
+					"a span": "pageItems.Header",
+					"a@href": "pageItems.LinkUrl",
+				}
+			}
+		};
+
+		searchResultTemplate = $p('#quicksearch-results-list').compile(directive);
 	},
 	doQuickSearch: function (query) {
 		$href = $('.quicksearchbar').data('searchurl') + '&q=' + query;
@@ -162,19 +185,11 @@ var snapQuicksearch = {
 			// Check if any products found
 			if ($foundResults > 0) {
 				kitUtils.log('quicksearch results > 0');
-				directive = {
-					"li": {
-						"pageItems <- Items": {
-							"a span": "pageItems.Header",
-							"a@href": "pageItems.LinkUrl",
-						}
-					}
-				};
-				$('div#quicksearch-results-list').render(response, directive);
+
+				$('#quicksearch-results-list').html(searchResultTemplate(response));
 			} else {
-				$html = '<div class="error">';
-				$html += '<p>Inga träffar.</p>';
-				$html += '</div>';
+				$('div.errormsg p').html('Din sökning på "' + query + '" gav inga träffar.')
+				$('div.errormsg').show();
 			}
 
 			// Render html
@@ -189,12 +204,10 @@ var snapQuicksearch = {
 
 			// Render error message ***** Should we get the error message from response.error? *****
 			// If so, include jqXHR and response in the fail function
-			$html += '<div class="error">';
-			$html += '<p>Something went wrong, please refresh the page and try again.</p>';
-			$html += '</div>';
+			$('div.errormsg p').html('Something went wrong, please refresh the page and try again.')
+			$('div.errormsg').show();
 
 			// Render html
-			$('#quicksearch-results').html($html);
 		});
 	}
 };
