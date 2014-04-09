@@ -153,6 +153,10 @@ var snapQuicksearch = {
 		directive = {
 			"li": {
 				"pageItems <- Items": {
+					"i@class": function (arg) {
+						kitUtils.log(arg.pageItems.item.Type);
+						return (arg.pageItems.item.Type == 'Page') ? 'fa fa-angle-right' : 'fa fa-file-o';
+					},
 					"a span": "pageItems.Header",
 					"a@href": "pageItems.LinkUrl",
 				}

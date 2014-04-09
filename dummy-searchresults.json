@@ -1,106 +1,55 @@
 {
-   "Pages": [{
-			      "Items": [{
-			                                   "Header": "Tomt",
-			                                   "Author": "administrator",
-			                                   "StartPublish": "2013-10-03T12:45:26",
-			                                   "MainIntro": "test test test test test test test test test test ",
-			                                   "MainBody": "<p>test test test test test test test test test test&nbsp;test test test test test test test test test test&nbsp;test test test test test test test test test test&nbsp;test test test test test test test test test test&nbsp;test test test test test test test test test test&nbsp;test test test test test test test test test test&nbsp;test test test test test test test test test test sida 1 privat</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=42&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privatebanking/Vardag/Sida-1/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Test.txt",
-			                                   "Author": "",
-			                                   "StartPublish": "2013-10-24T09:03:31",
-			                                   "MainIntro": "",
-			                                   "MainBody": "",
-			                                   "LinkUrl": "/link/9bda2bc022f54339bb43dad7a3026839.txt",
-			                                   "FriendlyUrl": "/Documents/FORETAG/Test.txt",
-			                                   "Type": "Document"
-			      },
-			      {
-			                                   "Header": "Test.txt",
-			                                   "Author": "",
-			                                   "StartPublish": "2013-10-24T09:03:32",
-			                                   "MainIntro": "",
-			                                   "MainBody": "",
-			                                   "LinkUrl": "/link/8c0547c4c56a4b5f8ff448737c2d7018.txt",
-			                                   "FriendlyUrl": "/Documents/PRIVAT/Test.txt",
-			                                   "Type": "Document"
-			      },
-			      {
-			                                   "Header": "Sida 2",
-			                                   "Author": "administrator",
-			                                   "StartPublish": "2013-10-03T20:58:40",
-			                                   "MainIntro": "test test test test test ingress",
-			                                   "MainBody": "<p>test test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test test sida 2 privat</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=41&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privatebanking/Vardag/sida-2/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Sida 2",
-			                                   "Author": "developer",
-			                                   "StartPublish": "2013-10-03T20:58:40",
-			                                   "MainIntro": "test test test test test ingress",
-			                                   "MainBody": "<p>test test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test testtest test test test test sida 2 privat</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=20&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privat/Vardag/sida-2/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Vardag",
-			                                   "Author": "developer",
-			                                   "StartPublish": "2013-10-03T22:09:30",
-			                                   "MainIntro": "Ingressen till företag test",
-			                                   "MainBody": "<p>test test test test test&nbsp;</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=25&epslanguage=sv",
-			                                   "FriendlyUrl": "/Foretag/Vardag/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Sida 3-1",
-			                                   "Author": "administrator",
-			                                   "StartPublish": "2013-10-03T21:00:22",
-			                                   "MainIntro": "Test test test ingress",
-			                                   "MainBody": "<p>Test test test text lorem ipsum privat privat</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=40&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privatebanking/Vardag/sida3/sida-3-1/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Sida 3-1",
-			                                   "Author": "developer",
-			                                   "StartPublish": "2013-10-03T21:00:22",
-			                                   "MainIntro": "Test test test ingress",
-			                                   "MainBody": "<p>Test test test text lorem ipsum privat privat</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=22&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privat/Vardag/sida3/sida-3-1/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Sida 3",
-			                                   "Author": "administrator",
-			                                   "StartPublish": "2013-10-03T20:59:21",
-			                                   "MainIntro": "Test test test ingress sida 3",
-			                                   "MainBody": "<p>Test test</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=39&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privatebanking/Vardag/sida3/",
-			                                   "Type": "Page"
-			      },
-			      {
-			                                   "Header": "Sida 3",
-			                                   "Author": "developer",
-			                                   "StartPublish": "2013-10-03T20:59:21",
-			                                   "MainIntro": "Test test test ingress sida 3",
-			                                   "MainBody": "<p>Test test</p>",
-			                                   "LinkUrl": "/Views/Pages/StandardPageTemplate.aspx?id=21&epslanguage=sv",
-			                                   "FriendlyUrl": "/Privat/Vardag/sida3/",
-			                                   "Type": "Page"
-			      }]
-   }],
-   "Hits": 10,
-   "PageSize": 10
+	"Items": [{
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor sit amet dolores",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Document"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Document"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Document"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Document"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}, {
+		"Header": "Lorem ipsum dolor",
+		"LinkUrl": "startsida.html",
+		"Type": "Page"
+	}]
 }
