@@ -108,7 +108,11 @@ var snapNavigation = {
 
 		// Toggle Sidebar
 		$('#toggle-searchbar').on('click', function (e) {
-
+			kitUtils.log('open search');
+			if ($.cookie('searchQuery')) {
+				kitUtils.log($.cookie('searchQuery'));
+				snapQuicksearch.doQuickSearch($.cookie('searchQuery'));
+			};
 			// Prevent default
 			e.preventDefault();
 
@@ -201,6 +205,9 @@ var snapQuicksearch = {
 			$('#quicksearch-results .search-term').html(query);
 			$('.snap-drawer-right .loading').hide();
 			$('#quicksearch-results').show();
+
+			// Set search query session cookie
+			$.cookie('searchQuery', query);
 		});
 
 		// Ajax error
