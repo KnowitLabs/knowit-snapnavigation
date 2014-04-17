@@ -1,6 +1,6 @@
 {
 	"name": "SnapNavigation",
-	"version": "0.9.3",
+	"version": "0.9.4",
 	"homepage": "https://github.com/KnowitLabs/knowit-snapnavigation",
 	"authors": [
 		"Andreas Norman <andreas.norman@knowit.se>"
@@ -19,7 +19,7 @@
 		"jquery": "1.x",
 		"kitUtils": "0.9.x",
 		"jquery.cookie": "1.x",
-		"snapjs": null
+		"snapjs": "https://github.com/KnowitLabs/Snap.js.git"
 	},
 	"keywords": [
 		"SnapNavigation"
