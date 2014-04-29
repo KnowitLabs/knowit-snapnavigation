@@ -18,7 +18,7 @@ var snapNavigation = {
 		});
 
 		function afterWindowResize() {
-			if (kitUtils.isMobileBrowser === false) {
+			if (kitUtils.isMobileBrowser() === false) {
 				snapper.close();
 				$('html,body').animate({
 					scrollTop: 0
