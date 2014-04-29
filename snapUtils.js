@@ -17,6 +17,21 @@ var snapNavigation = {
 			}, 0);
 		});
 
+		function afterWindowResize() {
+			if (kitUtils.isMobileBrowser === false) {
+				snapper.close();
+				$('html,body').animate({
+					scrollTop: 0
+				}, 0);
+			}
+		};
+
+		var resizeTimer;
+		$(window).resize(function () {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(afterWindowResize, 100);
+		});
+
 		// Toggle Sidebar
 		$('#toggle-sidebar').on('click', function (e) {
 			e.preventDefault();
