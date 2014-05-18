@@ -46,6 +46,16 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		// Copy
+		copy: {
+			fontawesome: {
+				expand: true,
+				flatten: true,
+				src: 'dependencies/font-awesome/fonts/*',
+				dest: 'dist/fonts/'
+			},
+		},
+
 		jshint: {
 			gruntfile: {
 				options: {
@@ -68,9 +78,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-less');
-
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Default task.
-	grunt.registerTask('default', ['jshint', 'clean', 'concat', 'uglify', 'less']);
+	grunt.registerTask('default', ['jshint', 'clean', 'concat', 'uglify', 'less', 'copy:fontawesome']);
 
 };
