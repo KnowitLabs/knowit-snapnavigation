@@ -19,8 +19,9 @@ if (/*@cc_on!@*/false && document.documentMode === 10) {
     <script src="../dependencies/jquery/dist/jquery.min.js"></script>
     <script>
     jQuery(document).ready(function ($) {
-      snapQuicksearch.init();
+      kitUtils.init();
       snapNavigation.init();
+      snapQuicksearch.init();
       FastClick.attach(document.body);
     });
     </script>
@@ -175,7 +176,7 @@ if (/*@cc_on!@*/false && document.documentMode === 10) {
         <!--Right kopierad chrekb-->
         <div class="snap-drawer snap-drawer-right">
           <div class="searchbar-container">
-            <div class="quicksearchbar" data-searchurl="/soken/" data-json="assets/json/dummy-searchresults.json?pagesize=10&amp;filterByType=0">
+            <div class="quicksearchbar" data-searchurl="/soken/" data-json="../json/dummy-searchresults.json?pagesize=10&amp;filterByType=0">
               <input type="text" class="searchfield-snap" name="quicksearch" size="20" placeholder="Ange sökord...">
               <a class="sprite quicksearch-button" type="button"><i class="fa fa-search"></i></a>
             </div>
@@ -196,10 +197,20 @@ if (/*@cc_on!@*/false && document.documentMode === 10) {
 
       </div><!-- end snap drawers -->
 
-      <div class="snap-content">
-        <div class="row">
-          <div class="col-xs-12">Hejsan</div>
+      <div id="main-content" class="snap-content">
+        <div class="snap-overlay"></div>
+        <header>
+          
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">Hejsan</div>
+          </div>
         </div>
+
+        <footer>
+          
+        </footer>
       </div>
 
 
@@ -207,7 +218,7 @@ if (/*@cc_on!@*/false && document.documentMode === 10) {
     <script src="../dependencies/jquery.cookie/jquery.cookie.js"></script>
     <script src="../dependencies/kitUtils/kitUtils.js"></script>
     <script src="../dependencies/pure-templates/libs/pure.min.js"></script>
-    <script src="../dependencies/snapjs/snap.min.js"></script>
+    <script src="../dependencies/snapjs/snap.js"></script>
     <script src="../dependencies/fastclick/lib/fastclick.js"></script>
     <script src="../dist/js/SnapNavigation.min.js"></script>
 

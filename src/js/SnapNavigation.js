@@ -35,10 +35,12 @@ var snapNavigation = {
 		// Toggle Sidebar
 		$('#toggle-sidebar').on('click', function (e) {
 			e.preventDefault();
+			kitUtils.log('toggle-sidebar');
 
 			if ($('body').hasClass('snapjs-left')) {
 				snapper.close('left');
 			} else {
+				kitUtils.log('open left');
 				snapper.open('left');
 			}
 		});
