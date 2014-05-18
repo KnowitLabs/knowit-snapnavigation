@@ -11,14 +11,15 @@
 	"ignore": [
 		"**/.*",
 		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
+		"bower_components"
 	],
 	"dependencies": {
 		"jquery": "1.x",
+		"bootstrap": "3.x",
 		"kitUtils": "0.9.x",
 		"jquery.cookie": "1.x",
+		"pure-templates": null,
+		"fastclick": "1.x",
 		"snapjs": "https://github.com/KnowitLabs/Snap.js.git"
 	},
 	"keywords": [

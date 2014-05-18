@@ -1,0 +1,14 @@
+{
+  "name": "pure-templates",
+  "main": "libs/pure.js",
+  "homepage": "https://github.com/pure/pure",
+  "_release": "1db619a3ae",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1db619a3aec35cdebe229de4121b8465a8051166"
+  },
+  "_source": "git://github.com/pure/pure.git",
+  "_target": "*",
+  "_originalSource": "pure-templates"
+}

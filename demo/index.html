@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<script>  
+if (/*@cc_on!@*/false && document.documentMode === 10) {
+    document.documentElement.className+=' ie10';
+}
+</script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+      
+    <link href="../dependencies/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../dist/css/styles.min.css" rel="stylesheet" />
+
+    <title>Title</title>
+    <script src="../dependencies/jquery/dist/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function ($) {
+      snapQuicksearch.init();
+      snapNavigation.init();
+      FastClick.attach(document.body);
+    });
+    </script>
+  </head>
+  <body data-debug="true">
+      
+
+
+      <div class="top-bar hidden-md hidden-lg" id="top-bar">
+        <a href="#toggle-sidebar" class="toggle-sidebar" id="toggle-sidebar">
+          <i class="fa fa-bars"></i>
+          <span>Meny</span>
+        </a>
+        <a href="#" class="home-link">
+          <i class="fa fa-home"></i>
+        </a>
+        <a href="#toggle-searchbar" class="toggle-searchbar" id="toggle-searchbar">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+      
+      <div class="snap-drawers">
+        <div class="sidebar snap-drawer snap-drawer-left" id="sidebar">
+          <div class="snap-nav-header">
+            <a href="#" class="close-menu" id="close-left"><i class="fa fa-times fa-fw"></i>Stäng meny</a>
+          </div>
+          <div class="scrollcontent">
+            <ul class="mobile-navigation-list">
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Fängelse och häkte</span></a>
+                <ul>
+                  <li class="haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Fängelse</span></a>
+                    <ul>
+                      <li><a href="#">Våra anstalter</a></li>
+                      <li><a href="#">En dag på fängelset</a></li>
+                      <li><a href="#">Säkerhet</a></li>
+                      <li><a href="#">Arbete och utbildning</a></li>
+                      <li><a href="#">Behandling</a></li>
+                      <li><a href="#">Arbetet mot narkotika</a></li>
+                      <li class="selected"><a href="#">Föräldrarskap på anstalt</a></li>
+                      <li><a href="#">Utslussning och frigivning</a></li>
+                      <li class="haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Nivå 3</span></a>
+                        <ul>
+                          <li><a href="#">Nivå 3 a</a></li>
+                          <li><a href="#">Nivå 3 b</a></li>
+                          <li><a href="#">Nivå 3 c</a></li>
+                          <li><a href="#">Nivå 3 d</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Häkte</span></a>
+                    <ul>
+                      <li><a href="#">Våra häkten</a></li>
+                      <li><a href="#">En dag på häktet</a></li>
+                      <li><a href="#">Säkerhet och tillsyn</a></li>
+                      <li><a href="#">Narkotika och insatser</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Kriminalvård i frihet</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Behandling</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Statistik och forskning</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Om Kriminalvårde</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="http://www.google.com"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Kontakt</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <ul class="mobile-navigation-list">
+              <li class="topnode haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Dömd eller häktad</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Anhörig och barn</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Press</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+              <li class="topnode haschildren"><a href="#"><i class="fa fa-plus fa-fw mobile-navigation-icon"></i> <span>Jobba hos oss</span></a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div><!-- end snap drawer left -->
+        <!--Right kopierad chrekb-->
+        <div class="snap-drawer snap-drawer-right">
+          <div class="searchbar-container">
+            <div class="quicksearchbar" data-searchurl="/soken/" data-json="assets/json/dummy-searchresults.json?pagesize=10&amp;filterByType=0">
+              <input type="text" class="searchfield-snap" name="quicksearch" size="20" placeholder="Ange sökord...">
+              <a class="sprite quicksearch-button" type="button"><i class="fa fa-search"></i></a>
+            </div>
+          </div>
+          <div class="scrollcontent">
+            <div class="loading" style="display:none"><div class="loader"></div><span>Söker...</span></div>
+            <div id="quicksearch-results" class="search-result-menu" style="display:none">
+              <div class="searchhits"><span class="search-number"></span> sidor matchar din sökning på "<span class="search-term">lorem ipsum</span>"</div>
+              <div id="quicksearch-results-list">
+                  <ul>
+                    <li><a href="#"><span></span><i></i></a></li>
+                  </ul>
+              </div>
+              <div class="errormsg"><p></p></div>
+            </div>
+          </div>
+        </div><!-- end snap drawer right -->
+
+      </div><!-- end snap drawers -->
+
+      <div class="snap-content">
+        <div class="row">
+          <div class="col-xs-12">Hejsan</div>
+        </div>
+      </div>
+
+
+
+    <script src="../dependencies/jquery.cookie/jquery.cookie.js"></script>
+    <script src="../dependencies/kitUtils/kitUtils.js"></script>
+    <script src="../dependencies/pure-templates/libs/pure.min.js"></script>
+    <script src="../dependencies/snapjs/snap.min.js"></script>
+    <script src="../dependencies/fastclick/lib/fastclick.js"></script>
+    <script src="../dist/js/SnapNavigation.min.js"></script>
+
+        </body>
+      </html>

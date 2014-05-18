@@ -1,0 +1,33 @@
+{
+  "name": "kitUtils",
+  "main": "kitUtils.js",
+  "version": "0.9.3",
+  "homepage": "https://github.com/KnowitLabs/kitUtils",
+  "authors": [
+    "Andreas Norman <andreas.norman@knowit.se>"
+  ],
+  "description": "Utils JS for web projects",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.x"
+  },
+  "keywords": [
+    "kitutils"
+  ],
+  "_release": "0.9.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.9.3",
+    "commit": "d8faa4be3a42153f60f9c4731371f87c677c1e55"
+  },
+  "_source": "git://github.com/KnowitLabs/kitUtils.git",
+  "_target": "0.9.x",
+  "_originalSource": "kitUtils"
+}
