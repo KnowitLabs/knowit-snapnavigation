@@ -19,10 +19,12 @@ var snapNavigation = {
 
 		function afterWindowResize() {
 			if (kitUtils.isMobileBrowser() === false) {
-				snapper.close();
-				$('html,body').animate({
-					scrollTop: 0
-				}, 0);
+				if( $('.snap-content').css('position') === 'absolute') {
+					snapper.close();
+					$('html,body').animate({
+						scrollTop: 0
+					}, 0);
+				}
 			}
 		}
 

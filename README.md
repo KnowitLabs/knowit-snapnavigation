@@ -1,8 +1,8 @@
-Snap Navigation 1.0.0
+Snap Navigation 1.0.1
 =====================
 
 ##Background
-snapjs has proven a bit tricky to install and to setup with maximum compatibility in our web projects. This is no more than helper classes making it quick for us to implement snapjs the way we want it implemented. 
+snapjs has proven a bit tricky to install and to setup with maximum compatibility in our web projects. This is no more than helper classes making it quick for us to implement snapjs the way we want it implemented.
 
 *This is in no way better for anyone else, but it could be*
 
@@ -12,7 +12,7 @@ snapjs has proven a bit tricky to install and to setup with maximum compatibilit
 * Stores searchresults in a cookie for better usability
 * Collapsible tree menu
 * Fixed top bar
-* Font Awesome icons 
+* Font Awesome icons
 
 ##Browser Support
 * Google Chrome
@@ -62,5 +62,8 @@ FastClick.attach(document.body);
 ```
 
 ##Changelog
+
+####1.0.1 - Bug fix
+* Will not close snap menu on resize if ```.snap-content``` has position: relative
 
 ####1.0.0 - Initial release
