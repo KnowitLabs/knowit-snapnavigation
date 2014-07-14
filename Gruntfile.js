@@ -56,6 +56,22 @@ module.exports = function (grunt) {
 			},
 		},
 
+		// Watch
+		watch: {
+			less: {
+				files: [
+					'src/less/*.less'
+				],
+				tasks: ['default']
+			},
+			js: {
+				files: [
+					'src/js/*.js'
+				],
+				tasks: ['default']
+			}
+		},
+
 		jshint: {
 			gruntfile: {
 				options: {
@@ -79,6 +95,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task.
 	grunt.registerTask('default', ['jshint', 'clean', 'concat', 'uglify', 'less', 'copy:fontawesome']);

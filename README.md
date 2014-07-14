@@ -1,4 +1,4 @@
-Snap Navigation 1.0.1
+Snap Navigation 1.0.2
 =====================
 
 ##Background
@@ -62,6 +62,10 @@ FastClick.attach(document.body);
 ```
 
 ##Changelog
+
+####1.0.2
+* CSS fix with margins with the search result
+* Removed ```<i>``` element  from the search result and moved icon to the ```<a href>``` 
 
 ####1.0.1 - Bug fix
 * Will not close snap menu on resize if ```.snap-content``` has position: relative
