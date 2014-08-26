@@ -63,9 +63,12 @@ FastClick.attach(document.body);
 
 ##Changelog
 
+####1.0.3
+* Will now clear all inline styling on ```.snap-content``` when the window is resized to over a specific value
+
 ####1.0.2
 * CSS fix with margins with the search result
-* Removed ```<i>``` element  from the search result and moved icon to the ```<a href>``` 
+* Removed ```<i>``` element  from the search result and moved icon to the ```<a href>```
 
 ####1.0.1 - Bug fix
 * Will not close snap menu on resize if ```.snap-content``` has position: relative

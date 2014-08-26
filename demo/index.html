@@ -21,6 +21,7 @@ if (/*@cc_on!@*/false && document.documentMode === 10) {
     jQuery(document).ready(function ($) {
       kitUtils.init();
       snapNavigation.init();
+      snapNavigation.setBreakpoint(800);
       snapQuicksearch.init();
       FastClick.attach(document.body);
     });

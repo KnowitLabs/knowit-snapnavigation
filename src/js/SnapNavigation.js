@@ -1,4 +1,6 @@
 var snapNavigation = {
+	breakpoint: 991,
+
 	init: function () {
 
 		// SnapJS
@@ -24,6 +26,9 @@ var snapNavigation = {
 					$('html,body').animate({
 						scrollTop: 0
 					}, 0);
+				}
+				if ($( window ).width() > snapNavigation.breakpoint) {
+					$('.snap-content').attr('style', '');
 				}
 			}
 		}
@@ -152,5 +157,13 @@ var snapNavigation = {
 			e.preventDefault();
 			snapper.close();
 		});
+	},
+
+	setBreakpoint: function (value) {
+		var reg = new RegExp('[0-9]');
+		if (value.toString().length <= 4 && reg.test(value)) {
+			kitUtils.log('value is ok');
+			snapNavigation.breakpoint = value;
+		}
 	}
 };
