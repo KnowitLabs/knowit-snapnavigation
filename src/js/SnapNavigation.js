@@ -54,11 +54,14 @@ var snapNavigation = {
 
 		snapper.on('close', function () {
 			$('.searchfield-snap').blur();
+			$('.snap-overlay').hide();
 			$('#top-bar').show();
 		});
 
 		snapper.on('open', function () {
 			$('#top-bar').hide();
+			$('.snap-overlay').show();
+			$('.snap-overlay').height($('.supercontainer').height());
 		});
 
 		// Toggles the plus/minus icons when opening and closing ul/li in the menu

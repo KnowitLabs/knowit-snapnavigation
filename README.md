@@ -1,4 +1,4 @@
-Snap Navigation 1.0.2
+Snap Navigation 1.0.4
 =====================
 
 ##Background
@@ -61,7 +61,13 @@ snapQuicksearch.init();
 FastClick.attach(document.body);
 ```
 
+##Todo
+* Change template system to handlebars
+
 ##Changelog
+
+####1.0.4
+* Will calculate the height of your content in ```.supercontainer``` and apply that height to ```.snap-overlay```. You will need to include all your content: Header, Content and Footer in that supercontainer div.
 
 ####1.0.3
 * Will now clear all inline styling on ```.snap-content``` when the window is resized to over a specific value
