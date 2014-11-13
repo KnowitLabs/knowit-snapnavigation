@@ -66,6 +66,9 @@ FastClick.attach(document.body);
 
 ##Changelog
 
+####1.0.5
+* Fixed cookie to be set with path / to avoid duplicate session cookies.
+
 ####1.0.4
 * Will calculate the height of your content in ```.supercontainer``` and apply that height to ```.snap-overlay```. You will need to include all your content: Header, Content and Footer in that supercontainer div.
 

@@ -69,7 +69,7 @@ var snapQuicksearch = {
 			$('#quicksearch-results').show();
 
 			// Set search query session cookie
-			$.cookie('searchQuery', query);
+			$.cookie('searchQuery', query, {path: '/'});
 		});
 
 		// Ajax error
