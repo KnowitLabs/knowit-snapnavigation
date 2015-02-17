@@ -1,6 +1,4 @@
 var snapQuicksearch = {
-	searchResultTemplate: null,
-
 	init: function () {
 		$('.quicksearch-button').on('click', function (event) {
 			event.preventDefault();
@@ -8,6 +6,7 @@ var snapQuicksearch = {
 			kitUtils.log('Click quicksearch button');
 			snapQuicksearch.doQuickSearch($('.snap-drawer-right .searchfield-snap').val());
 		});
+
 		$('.snap-drawer-right .searchfield-snap').keydown(function (event) {
 			if (event.which === 13) {
 				$('.snap-drawer-right .loading').show();
@@ -16,71 +15,57 @@ var snapQuicksearch = {
 			}
 		});
 
-		directive = {
-			'li': {
-				'pageItems <- Items': {
-					'a@class': function (arg) {
-						kitUtils.log(arg.pageItems.item.Type);
-						return (arg.pageItems.item.Type === 'Page') ? 'icon angle-right' : 'icon file';
-					},
-					'a span': 'pageItems.Header',
-					'a@href': 'pageItems.LinkUrl',
-				}
-			}
-		};
-
-		searchResultTemplate = $p('#quicksearch-results-list').compile(directive);
 	},
+
 	doQuickSearch: function (query) {
-		$href = $('.quicksearchbar').data('searchurl') + '&q=' + query;
-		kitUtils.log($href);
+		$('div.errormsg p.error').hide();
+		$('div.errormsg').hide();
 
-		$('#quicksearch-button').attr('href', $href);
-
-		kitUtils.log('start quicksearch');
-		$jsonurl = $('.quicksearchbar').data('json');
+		$jsonurl = $('.quicksearchbar').data('searchurl');
 		$ajaxCall = $.ajax({
-			url: $jsonurl + '&query=' + query,
+			url: $jsonurl + '?q=' + query,
 			dataType: 'json'
 		});
 
 		// Ajax success
 		$ajaxCall.done(function (response) {
-			kitUtils.log('quicksearch response');
-			// Found products
-			kitUtils.log(response);
-
+			var output = '';
 			$foundResults = response.Items.length;
 
 			// Check if any products found
 			if ($foundResults > 0) {
-				kitUtils.log('quicksearch results > 0');
+				// Set search query session cookie
+				$.cookie('searchQuery', query, {path: '/'});
 
-				$('#quicksearch-results-list').html(searchResultTemplate(response));
+				// Build result output
+				output += '<ul>';
+				for (var i in response.Items) {
+					if (response.Items[i].Type === 'Page') {
+						output += '<li><a class="icon angle-right" href="' + response.Items[i].LinkUrl + '"><span>' + response.Items[i].Header + '</span></a></li>';
+					} else {
+						output += '<li><a class="icon file" href="' + response.Items[i].LinkUrl + '"><span>' + response.Items[i].Header + '</span></a></li>';
+					}
+				}
+				output += '</ul>';
 			} else {
-				$('div.errormsg p').html('Din sökning på "' + query + '" gav inga träffar.');
+				$.removeCookie('searchQuery');
+				$('div.errormsg p span').html(query);
 				$('div.errormsg').show();
 			}
 
 			// Render html
-			$('#quicksearch-results .search-number').html($foundResults);
-			$('#quicksearch-results .search-term').html(query);
+			$('.searchhits span.search-number').html($foundResults);
+			$('#quicksearch-results-list').html(output);
 			$('.snap-drawer-right .loading').hide();
 			$('#quicksearch-results').show();
-
-			// Set search query session cookie
-			$.cookie('searchQuery', query, {path: '/'});
 		});
 
 		// Ajax error
 		$ajaxCall.fail(function () {
-
 			// Render error message ***** Should we get the error message from response.error? *****
 			// If so, include jqXHR and response in the fail function
-			$('div.errormsg p').html('Something went wrong, please refresh the page and try again.');
+			$('div.errormsg p.error').show();
 			$('div.errormsg').show();
-
-			// Render html
 		});
 	}
 };

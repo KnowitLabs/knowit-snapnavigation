@@ -457,11 +457,16 @@ ul.mobile-navigation-list, .mobile-navigation-list li {
 	border-bottom: 1px solid #e5e5e5;
 }
 
-.mobile-navigation-list li.selected a {
+.mobile-navigation-list li.selected > a {
 	background-color: @primary_color;
 	color: #fff;
 	font-family: @body_font;
 }
+
+.mobile-navigation-list li.selected > a i {
+	color: #000;
+}
+
 
 .mobile-navigation-list li a.focus {
 	background-color: @primary_color;

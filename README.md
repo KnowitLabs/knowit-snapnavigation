@@ -1,4 +1,4 @@
-Snap Navigation 1.0.4
+Snap Navigation 2.0.0
 =====================
 
 ##Background
@@ -33,9 +33,6 @@ snapjs has proven a bit tricky to install and to setup with maximum compatibilit
 <!-- Dependency -->
 <script src="../dependencies/kitUtils/kitUtils.js"></script>
 
-<!-- Template engine for QuickSearch -->
-<script src="../dependencies/pure-templates/libs/pure.min.js"></script>
-
 <!-- snapjs of course -->
 <script src="../dependencies/snapjs/snap.js"></script>
 
@@ -65,6 +62,9 @@ FastClick.attach(document.body);
 * Change template system to handlebars
 
 ##Changelog
+
+####2.0.0
+* Search totally rewritten. No need for Pure Templates anymore.
 
 ####1.0.5
 * Fixed cookie to be set with path / to avoid duplicate session cookies.
