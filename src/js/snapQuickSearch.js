@@ -23,7 +23,7 @@ var snapQuicksearch = {
 
 		$jsonurl = $('.quicksearchbar').data('searchurl');
 		$ajaxCall = $.ajax({
-			url: $jsonurl + '?q=' + query,
+			url: $jsonurl + '&q=' + query,
 			dataType: 'json'
 		});
 
