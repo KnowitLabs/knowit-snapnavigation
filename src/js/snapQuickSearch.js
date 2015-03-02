@@ -18,6 +18,7 @@ var snapQuicksearch = {
 	},
 
 	doQuickSearch: function (query) {
+		kitUtils.log('doQuickSearch');
 		$('div.errormsg p.error').hide();
 		$('div.errormsg').hide();
 
@@ -55,6 +56,7 @@ var snapQuicksearch = {
 
 			// Render html
 			$('.searchhits span.search-number').html($foundResults);
+			$('.searchhits span.search-term').html(query);
 			$('#quicksearch-results-list').html(output);
 			$('.snap-drawer-right .loading').hide();
 			$('#quicksearch-results').show();

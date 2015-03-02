@@ -1,4 +1,4 @@
-Snap Navigation 2.0.0
+Snap Navigation 2.0.2
 =====================
 
 ##Background
